@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<AssemblyName>claude-usage</AssemblyName>
+		<RootNamespace>ClaudeUsage</RootNamespace>
+		<InvariantGlobalization>true</InvariantGlobalization>
+		<!-- Put the native SQLite library inside a single-file publish, so the exe is the only file. -->
+		<IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Data.Sqlite" Version="10.0.12" />
+	</ItemGroup>
+
+	<!-- The dashboard page and icon are embedded, so the published exe is one self-contained file. -->
+	<ItemGroup>
+		<Content Remove="wwwroot\**" />
+		<EmbeddedResource Include="wwwroot\index.html" LogicalName="ClaudeUsage.index.html" />
+		<EmbeddedResource Include="wwwroot\icon.svg" LogicalName="ClaudeUsage.icon.svg" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<InternalsVisibleTo Include="ClaudeUsage.Tests" />
+	</ItemGroup>
+
+</Project>

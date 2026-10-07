@@ -1,0 +1,21 @@
+# Build output
+bin/
+obj/
+publish/
+artifacts/
+TestResults/
+
+# IDE
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+
+# Local databases
+*.db
+*.db-shm
+*.db-wal
+
+# Bash crash dumps
+bash.exe.stackdump
