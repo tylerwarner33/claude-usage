@@ -10,7 +10,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.Data.Sqlite" Version="10.0.12" />
+		<PackageReference Include="Microsoft.Data.Sqlite" />
 	</ItemGroup>
 
 	<!-- The dashboard page and icon are embedded, so the published exe is one self-contained file. -->
