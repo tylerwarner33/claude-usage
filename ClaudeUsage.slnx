@@ -1,8 +1,15 @@
 <Solution>
-  <Folder Name="/src/">
-    <Project Path="src/ClaudeUsage/ClaudeUsage.csproj" />
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path=".gitattributes" />
+    <File Path=".gitignore" />
+    <File Path="Directory.Build.props" />
+    <File Path="LICENSE" />
+    <File Path="nuget.config" />
+    <File Path="README.md" />
   </Folder>
-  <Folder Name="/tests/">
-    <Project Path="tests/ClaudeUsage.Tests/ClaudeUsage.Tests.csproj" />
+  <Project Path="Source/ClaudeUsage/ClaudeUsage.csproj" />
+  <Folder Name="/Tests/">
+    <Project Path="Tests/ClaudeUsage.Tests/ClaudeUsage.Tests.csproj" />
   </Folder>
 </Solution>
