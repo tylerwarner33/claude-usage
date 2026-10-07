@@ -1,9 +1,6 @@
 using System.Diagnostics;
 using System.Net.Sockets;
 using System.Reflection;
-using System.Text.Json;
-using ClaudeUsage.Pricing;
-using ClaudeUsage.Scanning;
 
 namespace ClaudeUsage.Dashboard;
 

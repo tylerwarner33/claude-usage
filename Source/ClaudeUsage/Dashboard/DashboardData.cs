@@ -1,7 +1,3 @@
-using System.Globalization;
-using ClaudeUsage.Storage;
-using Microsoft.Data.Sqlite;
-
 namespace ClaudeUsage.Dashboard;
 
 // The property names become snake_case JSON keys that index.html reads (ex. CacheRead -> cache_read).

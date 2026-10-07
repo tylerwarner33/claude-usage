@@ -1,6 +1,3 @@
-using ClaudeUsage.Storage;
-using Microsoft.Data.Sqlite;
-
 namespace ClaudeUsage.Scanning;
 
 /// <summary>
