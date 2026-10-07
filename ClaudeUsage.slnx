@@ -9,6 +9,9 @@
     <File Path="nuget.config" />
     <File Path="README.md" />
   </Folder>
+  <Folder Name="/Solution Items/.agents/">
+    <File Path="AGENTS.md" />
+  </Folder>
   <Project Path="Source/ClaudeUsage/ClaudeUsage.csproj" />
   <Folder Name="/Tests/">
     <Project Path="Tests/ClaudeUsage.Tests/ClaudeUsage.Tests.csproj" />

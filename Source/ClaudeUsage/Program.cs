@@ -1,9 +1,6 @@
-using System.Globalization;
 using ClaudeUsage;
 using ClaudeUsage.Dashboard;
-using ClaudeUsage.Pricing;
 using ClaudeUsage.Reports;
-using ClaudeUsage.Scanning;
 
 const string Usage = """
 

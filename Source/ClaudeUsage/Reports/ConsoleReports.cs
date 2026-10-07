@@ -1,8 +1,4 @@
 using System.Diagnostics.CodeAnalysis;
-using System.Globalization;
-using ClaudeUsage.Pricing;
-using ClaudeUsage.Storage;
-using Microsoft.Data.Sqlite;
 
 namespace ClaudeUsage.Reports;
 
