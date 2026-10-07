@@ -29,7 +29,7 @@ The tool cannot record:
 ## Quick start
 
 ```
-dotnet run --project src/ClaudeUsage -- dashboard
+dotnet run --project Source/ClaudeUsage -- dashboard
 ```
 
 This command starts the dashboard at http://localhost:8080, opens your browser and scans in the background.
@@ -45,14 +45,14 @@ claude-usage dashboard [--projects-dir PATH] [--host HOST] [--port PORT] [--no-b
 claude-usage --version
 ```
 
-With `dotnet run`, put `--` before the command (ex. `dotnet run --project src/ClaudeUsage -- week`).
+With `dotnet run`, put `--` before the command (ex. `dotnet run --project Source/ClaudeUsage -- week`).
 
 The `today`, `week` and `stats` tables show the estimated cost and the cost share of each model.
 
 ## Install as one executable
 
 ```
-dotnet publish src/ClaudeUsage -c Release -r win-x64 --self-contained -p:PublishSingleFile=true -o publish
+dotnet publish Source/ClaudeUsage -c Release -r win-x64 --self-contained -p:PublishSingleFile=true -o publish
 ```
 
 Then put `publish\claude-usage.exe` in a folder on your `PATH`.
@@ -94,7 +94,7 @@ They show the value of your usage at API prices.
 The tool finds a price by exact model id, then by the longest id prefix (ex. `claude-haiku-4-5-20251001`).
 An unknown id that contains a family name (ex. `opus`) gets the price of the current model of that family.
 Models that do not contain `fable`, `mythos`, `opus`, `sonnet` or `haiku` get no cost.
-`src/ClaudeUsage/Pricing/ModelPricing.cs` is the only price table. The server sends it to the dashboard page.
+`Source/ClaudeUsage/Pricing/ModelPricing.cs` is the only price table. The server sends it to the dashboard page.
 
 ## Behavior notes
 
@@ -107,14 +107,14 @@ Models that do not contain `fable`, `mythos`, `opus`, `sonnet` or `haiku` get no
 
 | Path | Purpose |
 |---|---|
-| `src/ClaudeUsage/Program.cs` | Command-line entry point |
-| `src/ClaudeUsage/Scanning/` | JSONL parser and incremental scanner |
-| `src/ClaudeUsage/Storage/UsageDatabase.cs` | SQLite schema and connections |
-| `src/ClaudeUsage/Pricing/ModelPricing.cs` | Price table and cost calculation |
-| `src/ClaudeUsage/Reports/ConsoleReports.cs` | `today`, `week` and `stats` tables |
-| `src/ClaudeUsage/Dashboard/` | Web server and `/api/data` queries |
-| `src/ClaudeUsage/wwwroot/index.html` | Dashboard page (embedded in the executable) |
-| `tests/ClaudeUsage.Tests/` | xUnit tests |
+| `Source/ClaudeUsage/Program.cs` | Command-line entry point |
+| `Source/ClaudeUsage/Scanning/` | JSONL parser and incremental scanner |
+| `Source/ClaudeUsage/Storage/UsageDatabase.cs` | SQLite schema and connections |
+| `Source/ClaudeUsage/Pricing/ModelPricing.cs` | Price table and cost calculation |
+| `Source/ClaudeUsage/Reports/ConsoleReports.cs` | `today`, `week` and `stats` tables |
+| `Source/ClaudeUsage/Dashboard/` | Web server and `/api/data` queries |
+| `Source/ClaudeUsage/wwwroot/index.html` | Dashboard page (embedded in the executable) |
+| `Tests/ClaudeUsage.Tests/` | xUnit tests |
 
 ## Tests
 

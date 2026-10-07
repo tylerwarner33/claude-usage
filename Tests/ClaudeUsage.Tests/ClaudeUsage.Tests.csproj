@@ -16,7 +16,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\src\ClaudeUsage\ClaudeUsage.csproj" />
+		<ProjectReference Include="..\..\Source\ClaudeUsage\ClaudeUsage.csproj" />
 	</ItemGroup>
 
 </Project>
